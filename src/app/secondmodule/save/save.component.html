@@ -1,0 +1,28 @@
+<form>
+    <div class="form-row">
+      <div class="col-6 offset-3">
+        <label>Enter Id</label>
+        <input type="text" class="form-control" placeholder="Id" [(ngModel)]="adminObj.id" name="id">
+      </div><br>
+     
+      <div class="col-6 offset-3">
+        <label>Enter Name</label>
+       <input type="text" class="form-control" placeholder="name" [(ngModel)]="adminObj.name" name="name">
+      </div><br>
+      
+      <div class="col-6 offset-3">
+        <label>Enter UserName</label>
+        <input type="text" class="form-control" placeholder="username" [(ngModel)]="adminObj.username" name="username">
+       </div><br>
+      
+       <div class="col-6 offset-3">
+        <label>Enter Email</label>
+        <input type="text" class="form-control" placeholder="email"  [(ngModel)]="adminObj.email" name="email">
+       </div>
+      <br>
+       <div class="col-6 offset-3">
+        <label>Enter City</label>
+        <input type="text" class="form-control" placeholder="city"  [(ngModel)]="adminObj.address.city" name="city">
+       </div>
+    </div>
+  </form>

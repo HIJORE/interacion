@@ -1,0 +1,51 @@
+<!-- <form class="form">
+    <div class="col-6 offset-3">
+        <label>Username</label><br>
+        <input type="text" placeholder="Enter the username">
+    </div><br>
+
+    <div class="col-6 offset-3">
+        <label>Email</label><br>
+        <input type="email" placeholder="Enter the email">
+    </div><br>
+
+    <div class="col-6 offset-3">
+        <label>Password</label><br>
+        <input type="text" placeholder="Enter the Password">
+    </div><br>
+
+    <div class="col-6 offset-3">
+        <label>Conform Password</label><br>
+        <input type="text" placeholder="Enter the confirmPassword">
+    </div>
+    
+</form> -->
+
+<form  [formGroup]="reactiveForm" class="form">
+    <div class="form-row">
+      <div class="col-4 offset-4">
+        <label >UserName</label>
+        <input type="text" class="form-control" placeholder="Enter the Username" formControlName="username">
+        <span *ngIf="userName.touched && userName.invalid" [class]="red">Enter Valid Username</span>
+      </div><br>
+      <div class="col-4 offset-4">
+        <label >Email</label>
+        <input type="email" class="form-control" placeholder="Enter the Email"  formControlName="email">
+        
+        <span *ngIf="email.touched && email.invalid " [class]="red">Enter Valid Email Address</span>
+      </div><br>
+      <div class="col-4 offset-4">
+        <label >Password</label>
+        <input type="password" class="form-control" placeholder="Enter the password"  formControlName="password">
+        <span *ngIf="password.touched && password.invalid" [class]="red">Password Cannot be Blank</span>
+      </div><br>
+      <div class="col-4 offset-4">
+        <label >ConformPassword</label>
+        <input type="password" class="form-control" placeholder="Enter the Conform password"  formControlName="confirmPassword">
+        <span *ngIf="confirmPassword.touched && confirmPassword.invalid" [class]="red">ConformPassword Cannot be Blank</span>
+      </div><br>
+      <div class="col-md-6 offset-md-3 p-3 text-center">
+        <button type="button" *ngIf="reactiveForm.valid" [disabled]="false"  class="btn btn-primary" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+  </form>
